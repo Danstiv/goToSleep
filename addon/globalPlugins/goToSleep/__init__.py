@@ -14,8 +14,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         super().__init__(*args, **kwargs)
 
     @script(
-        description=_('Go to sleep'),
+        description=_('Go to sleep (S3)'),
         gesture='kb:shift+control+alt+s'
     )
-    def script_go_to_sleep(self, gesture):
+    def script_go_to_sleep_s3(self, gesture):
         ctypes.windll.powrprof.SetSuspendState(False, False, False)
